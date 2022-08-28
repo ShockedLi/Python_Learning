@@ -1,7 +1,5 @@
 
 
-from cgi import print_exception
-from ctypes.wintypes import WORD
 
 
 print(ord('A'))
@@ -21,3 +19,11 @@ print(word)
 
 from datetime import datetime
 print(format(datetime(2000,3,21,23,23,23),'%Y-%m-%d %H:%M:%S'))
+
+from string import Template
+
+tmpl = Template('花了$p,买了名为$b的一本书')
+s = tmpl.substitute(p = price, b = book)
+
+
+print(s)
